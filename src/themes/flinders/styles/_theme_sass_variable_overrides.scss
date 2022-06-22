@@ -52,3 +52,15 @@ $theme-colors: (
 $link-color: map-get($theme-colors, info) !default;
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
 $font-family-sans-serif: "DM Sans" !default;
+
+// News-Page 'Banner Image'
+.jumbotron {
+  height: 368px;
+}
+.list-group-item.active {
+  color: $midnightBlue !important;
+}
+
+.btn-outline-primary {
+  color: $midnightBlue !important;
+}
