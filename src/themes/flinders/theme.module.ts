@@ -85,6 +85,12 @@ import { ResourcePoliciesModule } from '../../app/shared/resource-policies/resou
 import { ComcolModule } from '../../app/shared/comcol/comcol.module';
 import { FeedbackComponent } from './app/info/feedback/feedback.component';
 import { CommunityListComponent } from './app/community-list-page/community-list/community-list.component';
+import {
+  TopLevelCommunityListComponent
+} from './app/home-page/top-level-community-list/top-level-community-list.component';
+import {
+  EndUserAgreementContentComponent
+} from "./app/info/end-user-agreement/end-user-agreement-content/end-user-agreement-content.component";
 
 const DECLARATIONS = [
   FileSectionComponent,
@@ -128,7 +134,10 @@ const DECLARATIONS = [
   HeaderNavbarWrapperComponent,
   BreadcrumbsComponent,
   FeedbackComponent,
-  CommunityListComponent
+  CommunityListComponent,
+  TopLevelCommunityListComponent,
+  EndUserAgreementComponent,
+  EndUserAgreementContentComponent
 ];
 
 @NgModule({
