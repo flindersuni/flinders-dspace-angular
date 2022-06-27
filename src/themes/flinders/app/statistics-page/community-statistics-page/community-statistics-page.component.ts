@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { CommunityStatisticsPageComponent as BaseComponent } from '../../../../../app/statistics-page/community-statistics-page/community-statistics-page.component';
 
 @Component({
-  selector: 'ds-collection-statistics-page',
+  selector: 'ds-collection-statistics-page-flinders',
   // styleUrls: ['./community-statistics-page.component.scss'],
   styleUrls: ['../../../../../app/statistics-page/community-statistics-page/community-statistics-page.component.scss'],
   // templateUrl: './community-statistics-page.component.html',

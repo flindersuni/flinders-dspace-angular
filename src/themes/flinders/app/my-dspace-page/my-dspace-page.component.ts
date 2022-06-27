@@ -7,10 +7,8 @@ import { MyDSpaceConfigurationService } from '../../../../app/my-dspace-page/my-
  * This component represents the whole mydspace page
  */
 @Component({
-  selector: 'ds-my-dspace-page',
-  // styleUrls: ['./my-dspace-page.component.scss'],
+  selector: 'ds-my-dspace-pag-flinders',
   styleUrls: ['../../../../app/my-dspace-page/my-dspace-page.component.scss'],
-  // templateUrl: './my-dspace-page.component.html',
   templateUrl: '../../../../app/my-dspace-page/my-dspace-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [pushInOut],

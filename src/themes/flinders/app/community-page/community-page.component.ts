@@ -4,10 +4,8 @@ import { fadeInOut } from '../../../../app/shared/animations/fade';
 
 
 @Component({
-  selector: 'ds-community-page',
-  // templateUrl: './community-page.component.html',
+  selector: 'ds-community-page-flinders',
   templateUrl: '../../../../app/community-page/community-page.component.html',
-  // styleUrls: ['./community-page.component.scss']
   styleUrls: ['../../../../app/community-page/community-page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut]

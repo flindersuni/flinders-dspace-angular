@@ -5,10 +5,8 @@ import { HeaderNavbarWrapperComponent as BaseComponent } from '../../../../app/h
  * This component represents a wrapper for the horizontal navbar and the header
  */
 @Component({
-  selector: 'ds-header-navbar-wrapper',
-  // styleUrls: ['header-navbar-wrapper.component.scss'],
+  selector: 'ds-header-navbar-wrapper-flinders',
   styleUrls: ['../../../../app/header-nav-wrapper/header-navbar-wrapper.component.scss'],
-  // templateUrl: 'header-navbar-wrapper.component.html',
   templateUrl: '../../../../app/header-nav-wrapper/header-navbar-wrapper.component.html',
 })
 export class HeaderNavbarWrapperComponent extends BaseComponent {

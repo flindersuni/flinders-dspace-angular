@@ -90,7 +90,7 @@ import {
 } from './app/home-page/top-level-community-list/top-level-community-list.component';
 import {
   EndUserAgreementContentComponent
-} from "./app/info/end-user-agreement/end-user-agreement-content/end-user-agreement-content.component";
+} from './app/info/end-user-agreement/end-user-agreement-content/end-user-agreement-content.component';
 
 const DECLARATIONS = [
   FileSectionComponent,

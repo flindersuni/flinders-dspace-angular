@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 import { ForgotPasswordFormComponent as BaseComponent } from '../../../../../app/forgot-password/forgot-password-form/forgot-password-form.component';
 
 @Component({
-  selector: 'ds-forgot-password-form',
-  // styleUrls: ['./forgot-password-form.component.scss'],
+  selector: 'ds-forgot-password-form-flinders',
   styleUrls: ['../../../../../app/forgot-password/forgot-password-form/forgot-password-form.component.scss'],
-  // templateUrl: './forgot-password-form.component.html'
   templateUrl: '../../../../../app/forgot-password/forgot-password-form/forgot-password-form.component.html'
 })
 /**

@@ -3,8 +3,7 @@ import { slideSidebarPadding } from '../../../../../../../app/shared/animations/
 import { FileSectionComponent as BaseComponent } from '../../../../../../../app/item-page/simple/field-components/file-section/file-section.component';
 
 @Component({
-    selector: 'ds-item-page-file-section',
-    // templateUrl: './file-section.component.html',
+    selector: 'ds-item-page-file-section-flinders',
     templateUrl: '../../../../../../../app/item-page/simple/field-components/file-section/file-section.component.html',
     animations: [slideSidebarPadding],
 })

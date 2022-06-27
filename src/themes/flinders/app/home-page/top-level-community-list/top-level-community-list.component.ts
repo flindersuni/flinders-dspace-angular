@@ -16,7 +16,7 @@ import {hasValue} from '../../../../../app/shared/empty.util';
  * this component renders the Top-Level Community list
  */
 @Component({
-  selector: 'ds-top-level-community-list',
+  selector: 'ds-top-level-community-list-flinders',
   styleUrls: ['./top-level-community-list.component.scss'],
   templateUrl: './top-level-community-list.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,

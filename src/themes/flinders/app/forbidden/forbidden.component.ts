@@ -3,10 +3,8 @@ import { ForbiddenComponent as BaseComponent } from '../../../../app/forbidden/f
 
 
 @Component({
-  selector: 'ds-forbidden',
-  // templateUrl: './forbidden.component.html',
+  selector: 'ds-forbidden-flinders',
   templateUrl: '../../../../app/forbidden/forbidden.component.html',
-  // styleUrls: ['./forbidden.component.scss']
   styleUrls: ['../../../../app/forbidden/forbidden.component.scss']
 })
 /**

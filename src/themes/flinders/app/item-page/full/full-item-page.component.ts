@@ -8,10 +8,8 @@ import { FullItemPageComponent as BaseComponent } from '../../../../../app/item-
  */
 
 @Component({
-  selector: 'ds-full-item-page',
-  // styleUrls: ['./full-item-page.component.scss'],
+  selector: 'ds-full-item-page-flinders',
   styleUrls: ['../../../../../app/item-page/full/full-item-page.component.scss'],
-  // templateUrl: './full-item-page.component.html',
   templateUrl: '../../../../../app/item-page/full/full-item-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut]

@@ -12,7 +12,7 @@ import {LogOutAction} from '../../../../../app/core/auth/auth.actions';
 import { of as observableOf } from 'rxjs';
 
 @Component({
-  selector: 'ds-end-user-agreement',
+  selector: 'ds-end-user-agreement-flinders',
   templateUrl: './end-user-agreement.component.html',
   styleUrls: ['./end-user-agreement.component.scss']
 })

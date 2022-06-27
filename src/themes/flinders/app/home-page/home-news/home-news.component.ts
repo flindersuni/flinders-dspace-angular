@@ -2,11 +2,9 @@ import { Component } from '@angular/core';
 import { HomeNewsComponent as BaseComponent } from '../../../../../app/home-page/home-news/home-news.component';
 
 @Component({
-  selector: 'ds-home-news',
+  selector: 'ds-home-news-flinders',
   styleUrls: ['./home-news.component.scss'],
-  // styleUrls: ['../../../../../app/home-page/home-news/home-news.component.scss'],
   templateUrl: './home-news.component.html'
-  // templateUrl: '../../../../../app/home-page/home-news/home-news.component.html'
 })
 
 /**

@@ -2,10 +2,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PageNotFoundComponent as BaseComponent } from '../../../../app/pagenotfound/pagenotfound.component';
 
 @Component({
-  selector: 'ds-pagenotfound',
-  // styleUrls: ['./pagenotfound.component.scss'],
+  selector: 'ds-pagenotfound-flinders',
   styleUrls: ['../../../../app/pagenotfound/pagenotfound.component.scss'],
-  // templateUrl: './pagenotfound.component.html'
   templateUrl: '../../../../app/pagenotfound/pagenotfound.component.html',
   changeDetection: ChangeDetectionStrategy.Default
 })

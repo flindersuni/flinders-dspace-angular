@@ -5,10 +5,8 @@ import { HeaderComponent as BaseComponent } from '../../../../app/header/header.
  * Represents the header with the logo and simple navigation
  */
 @Component({
-  selector: 'ds-header',
-  // styleUrls: ['header.component.scss'],
+  selector: 'ds-header-flinders',
   styleUrls: ['../../../../app/header/header.component.scss'],
-  // templateUrl: 'header.component.html',
   templateUrl: 'header.component.html',
 })
 export class HeaderComponent extends BaseComponent {
