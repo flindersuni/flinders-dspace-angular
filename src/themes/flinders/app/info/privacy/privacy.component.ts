@@ -4,7 +4,8 @@ import { PrivacyComponent as BaseComponent } from '../../../../../app/info/priva
 @Component({
   selector: 'ds-privacy-flinders',
   styleUrls: ['../../../../../app/info/privacy/privacy.component.scss'],
-  templateUrl: '../../../../../app/info/privacy/privacy.component.html'
+  //templateUrl: '../../../../../app/info/privacy/privacy.component.html'
+  templateUrl: './privacy.component.html'
 })
 
 /**
