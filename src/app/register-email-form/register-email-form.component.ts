@@ -52,6 +52,8 @@ export class RegisterEmailFormComponent implements OnInit {
    * Register an email address
    */
   register() {
+    return;
+    /*
     if (!this.form.invalid) {
       this.epersonRegistrationService.registerEmail(this.email.value).subscribe((response: RemoteData<Registration>) => {
           if (response.hasSucceeded) {
@@ -64,7 +66,7 @@ export class RegisterEmailFormComponent implements OnInit {
           }
         }
       );
-    }
+    }*/
   }
 
   get email() {

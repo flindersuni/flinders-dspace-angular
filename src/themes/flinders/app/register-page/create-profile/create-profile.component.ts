@@ -6,8 +6,8 @@ import { CreateProfileComponent as BaseComponent } from '../../../../../app/regi
  */
 @Component({
   selector: 'ds-create-profile-flinders',
-  styleUrls: ['../../../../../app/register-page/create-profile/create-profile.component.scss'],
-  templateUrl: '../../../../../app/register-page/create-profile/create-profile.component.html'
+  styleUrls: ['create-profile.component.scss'],
+  templateUrl: 'create-profile.component.html'
 })
 export class CreateProfileComponent extends BaseComponent {
 }
