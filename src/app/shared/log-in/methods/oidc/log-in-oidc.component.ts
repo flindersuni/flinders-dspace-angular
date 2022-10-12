@@ -1,20 +1,23 @@
-import { Component, Inject, OnInit, } from '@angular/core';
+import {Component, Inject, OnInit,} from '@angular/core';
 
-import { Observable } from 'rxjs';
-import { select, Store } from '@ngrx/store';
+import {Observable} from 'rxjs';
+import {select, Store} from '@ngrx/store';
 
-import { renderAuthMethodFor } from '../log-in.methods-decorator';
-import { AuthMethodType } from '../../../../core/auth/models/auth.method-type';
-import { AuthMethod } from '../../../../core/auth/models/auth.method';
+import {renderAuthMethodFor} from '../log-in.methods-decorator';
+import {AuthMethodType} from '../../../../core/auth/models/auth.method-type';
+import {AuthMethod} from '../../../../core/auth/models/auth.method';
 
-import { CoreState } from '../../../../core/core.reducers';
-import { isAuthenticated, isAuthenticationLoading } from '../../../../core/auth/selectors';
-import { NativeWindowRef, NativeWindowService } from '../../../../core/services/window.service';
-import { isNotNull, isEmpty } from '../../../empty.util';
-import { AuthService } from '../../../../core/auth/auth.service';
-import { HardRedirectService } from '../../../../core/services/hard-redirect.service';
-import { take } from 'rxjs/operators';
-import { URLCombiner } from '../../../../core/url-combiner/url-combiner';
+import {CoreState} from '../../../../core/core.reducers';
+import {isAuthenticated, isAuthenticationLoading} from '../../../../core/auth/selectors';
+import {NativeWindowRef, NativeWindowService} from '../../../../core/services/window.service';
+import {isNotNull, isEmpty} from '../../../empty.util';
+import {AuthService} from '../../../../core/auth/auth.service';
+import {HardRedirectService} from '../../../../core/services/hard-redirect.service';
+import {take} from 'rxjs/operators';
+import {URLCombiner} from '../../../../core/url-combiner/url-combiner';
+
+// we need the state=HEXCODE param for OIDC
+import * as _crypto from 'crypto';
 
 @Component({
   selector: 'ds-log-in-oidc',
@@ -100,9 +103,10 @@ export class LogInOidcComponent implements OnInit {
         const newRedirectUrl = `?redirectUrl=${correctRedirectUrl}`;
         oidcServerUrl = this.location.replace(/\?redirectUrl=(.*)/g, newRedirectUrl);
       }
-
+      const randhex = _crypto.randomBytes(64).toString('hex');
+      const stateCodeRedirect = oidcServerUrl + '&state=' + randhex;
       // redirect to oidc authentication url
-      this.hardRedirectService.redirect(oidcServerUrl);
+      this.hardRedirectService.redirect(stateCodeRedirect);
     });
 
   }

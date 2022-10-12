@@ -74,9 +74,10 @@ import { ServerCheckGuard } from './core/server-check/server-check.guard';
           },
           {
             path: REGISTER_PATH,
-            loadChildren: () => import('./register-page/register-page.module')
-              .then((m) => m.RegisterPageModule),
-            canActivate: [SiteRegisterGuard]
+            // loadChildren: () => import('./register-page/register-page.module')
+            //  .then((m) => m.RegisterPageModule),
+            // canActivate: [SiteRegisterGuard]
+            redirectTo: FORBIDDEN_PATH
           },
           {
             path: FORGOT_PASSWORD_PATH,

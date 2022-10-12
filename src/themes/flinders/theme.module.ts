@@ -99,7 +99,7 @@ import {
 import {
   EndUserAgreementContentComponent
 } from './app/info/end-user-agreement/end-user-agreement-content/end-user-agreement-content.component';
-import {PrivacyContentComponent} from "./app/info/privacy/privacy-content/privacy-content.component";
+import {PrivacyContentComponent} from './app/info/privacy/privacy-content/privacy-content.component';
 
 const DECLARATIONS = [
   FileSectionComponent,
