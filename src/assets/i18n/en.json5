@@ -2048,6 +2048,12 @@
 
   "item.page.publisher": "Publisher",
 
+  "item.page.dc.oaire.licence.condition.licence": "Licence",
+
+  "item.page.dc.rights" :"Rights",
+
+  "item.page.dc.rights.holder" :"Rights Holder",
+
   "item.page.titleprefix": "Item: ",
 
   "item.page.volume-title": "Volume Title",
