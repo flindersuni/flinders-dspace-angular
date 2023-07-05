@@ -11,5 +11,5 @@ import { slideMobileNav } from '../../../../app/shared/animations/slide';
   templateUrl: '../../../../app/navbar/navbar.component.html',
   animations: [slideMobileNav]
 })
-export class NavbarComponent extends BaseComponent {
+export class FlindersNavbarComponent extends BaseComponent {
 }

@@ -12,5 +12,5 @@ import { SiteStatisticsPageComponent as BaseComponent } from '../../../../../app
 /**
  * Component representing the site-wide statistics page.
  */
-export class SiteStatisticsPageComponent extends BaseComponent {}
+export class FlindersSiteStatisticsPageComponent extends BaseComponent {}
 

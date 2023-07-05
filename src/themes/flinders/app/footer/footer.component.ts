@@ -6,5 +6,5 @@ import { FooterComponent as BaseComponent } from '../../../../app/footer/footer.
   styleUrls: ['../../../../app/footer/footer.component.scss'],
   templateUrl: 'footer.component.html'
 })
-export class FooterComponent extends BaseComponent {
+export class FlindersFooterComponent extends BaseComponent {
 }

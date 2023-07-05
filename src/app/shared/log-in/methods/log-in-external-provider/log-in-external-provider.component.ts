@@ -1,36 +1,17 @@
 import {Component, Inject, OnInit,} from '@angular/core';
-
-import { Observable } from 'rxjs';
-import { take } from 'rxjs/operators';
-import { select, Store } from '@ngrx/store';
 import {Observable} from 'rxjs';
+import {take} from 'rxjs/operators';
 import {select, Store} from '@ngrx/store';
-
-import { AuthMethod } from '../../../../core/auth/models/auth.method';
+import {AuthMethod} from '../../../../core/auth/models/auth.method';
 import {renderAuthMethodFor} from '../log-in.methods-decorator';
 import {AuthMethodType} from '../../../../core/auth/models/auth.method-type';
-import {AuthMethod} from '../../../../core/auth/models/auth.method';
-
-import { isAuthenticated, isAuthenticationLoading } from '../../../../core/auth/selectors';
-import { NativeWindowRef, NativeWindowService } from '../../../../core/services/window.service';
-import { isEmpty, isNotNull } from '../../../empty.util';
-import { AuthService } from '../../../../core/auth/auth.service';
-import { HardRedirectService } from '../../../../core/services/hard-redirect.service';
-import { URLCombiner } from '../../../../core/url-combiner/url-combiner';
-import { CoreState } from '../../../../core/core-state.model';
-import { renderAuthMethodFor } from '../log-in.methods-decorator';
-import { AuthMethodType } from '../../../../core/auth/models/auth.method-type';
-import {CoreState} from '../../../../core/core.reducers';
 import {isAuthenticated, isAuthenticationLoading} from '../../../../core/auth/selectors';
 import {NativeWindowRef, NativeWindowService} from '../../../../core/services/window.service';
-import {isNotNull, isEmpty} from '../../../empty.util';
+import {isEmpty, isNotNull} from '../../../empty.util';
 import {AuthService} from '../../../../core/auth/auth.service';
 import {HardRedirectService} from '../../../../core/services/hard-redirect.service';
-import {take} from 'rxjs/operators';
 import {URLCombiner} from '../../../../core/url-combiner/url-combiner';
-
-// we need the state=HEXCODE param for OIDC
-import * as _crypto from 'crypto';
+import {CoreState} from '../../../../core/core-state.model';
 
 @Component({
   selector: 'ds-log-in-external-provider',
@@ -123,8 +104,9 @@ export class LogInExternalProviderComponent implements OnInit {
       }
 
       // redirect to shibboleth authentication url
-      const randhex = _crypto.randomBytes(64).toString('hex');
-      const stateCodeRedirect = oidcServerUrl + '&state=' + randhex;
+      const randhex = [...crypto.getRandomValues(new Uint8Array(20))].map
+                            (m => ('0' + m.toString(16)).slice(-2)).join('');
+      const stateCodeRedirect = externalServerUrl + '&state=' + randhex;
       // redirect to oidc authentication url
       this.hardRedirectService.redirect(stateCodeRedirect);
     });

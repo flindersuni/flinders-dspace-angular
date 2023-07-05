@@ -10,5 +10,5 @@ import { WorkflowItemDeleteComponent as BaseComponent } from '../../../../../app
 /**
  * Component representing a page to delete a workflow item
  */
-export class WorkflowItemDeleteComponent extends BaseComponent {
+export class FlindersWorkflowItemDeleteComponent extends BaseComponent {
 }

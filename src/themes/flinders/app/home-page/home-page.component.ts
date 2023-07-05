@@ -6,6 +6,6 @@ import { HomePageComponent as BaseComponent } from '../../../../app/home-page/ho
   styleUrls: ['../../../../app/home-page/home-page.component.scss'],
   templateUrl: '../../../../app/home-page/home-page.component.html'
 })
-export class HomePageComponent extends BaseComponent {
+export class FlindersHomePageComponent extends BaseComponent {
 
 }

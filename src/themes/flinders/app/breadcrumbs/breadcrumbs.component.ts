@@ -9,5 +9,5 @@ import { BreadcrumbsComponent as BaseComponent } from '../../../../app/breadcrum
   templateUrl: '../../../../app/breadcrumbs/breadcrumbs.component.html',
   styleUrls: ['../../../../app/breadcrumbs/breadcrumbs.component.scss']
 })
-export class BreadcrumbsComponent extends BaseComponent {
+export class FlindersBreadcrumbsComponent extends BaseComponent {
 }

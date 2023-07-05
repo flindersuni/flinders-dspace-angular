@@ -21,7 +21,7 @@ import {MetadataMap} from "../../../../../app/core/shared/metadata.models";
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut]
 })
-export class ItemPageComponent extends BaseComponent {
+export class FlindersItemPageComponent extends BaseComponent {
 
   metadata$: Observable<MetadataMap>;
 

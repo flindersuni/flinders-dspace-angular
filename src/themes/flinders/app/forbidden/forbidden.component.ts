@@ -10,4 +10,4 @@ import { ForbiddenComponent as BaseComponent } from '../../../../app/forbidden/f
 /**
  * This component representing the `Forbidden` DSpace page.
  */
-export class ForbiddenComponent extends BaseComponent {}
+export class FlindersForbiddenComponent extends BaseComponent {}
