@@ -1,18 +1,20 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit } from '@angular/core';
 import { ComcolMetadataComponent } from '../../../shared/comcol/comcol-forms/edit-comcol-page/comcol-metadata/comcol-metadata.component';
 import { Collection } from '../../../core/shared/collection.model';
 import { CollectionDataService } from '../../../core/data/collection-data.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router, Scroll } from '@angular/router';
 import { ItemTemplateDataService } from '../../../core/data/item-template-data.service';
 import { combineLatest as combineLatestObservable, Observable } from 'rxjs';
 import { RemoteData } from '../../../core/data/remote-data';
 import { Item } from '../../../core/shared/item.model';
-import { getFirstSucceededRemoteDataPayload } from '../../../core/shared/operators';
-import { switchMap } from 'rxjs/operators';
+import { getFirstCompletedRemoteData, getFirstSucceededRemoteDataPayload } from '../../../core/shared/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { NotificationsService } from '../../../shared/notifications/notifications.service';
 import { TranslateService } from '@ngx-translate/core';
 import { RequestService } from '../../../core/data/request.service';
 import { getCollectionItemTemplateRoute } from '../../collection-page-routing-paths';
+import { NoContent } from '../../../core/shared/NoContent.model';
+import { hasValue } from '../../../shared/empty.util';
 
 /**
  * Component for editing a collection's metadata
@@ -21,7 +23,7 @@ import { getCollectionItemTemplateRoute } from '../../collection-page-routing-pa
   selector: 'ds-collection-metadata',
   templateUrl: './collection-metadata.component.html',
 })
-export class CollectionMetadataComponent extends ComcolMetadataComponent<Collection> {
+export class CollectionMetadataComponent extends ComcolMetadataComponent<Collection> implements OnInit {
   protected frontendURL = '/collections/';
   protected type = Collection.type;
 
@@ -38,13 +40,27 @@ export class CollectionMetadataComponent extends ComcolMetadataComponent<Collect
     protected notificationsService: NotificationsService,
     protected translate: TranslateService,
     protected requestService: RequestService,
+    protected chd: ChangeDetectorRef
   ) {
     super(collectionDataService, router, route, notificationsService, translate);
   }
 
+  /**
+   * Cheking if the navigation is done and if so, initialize the collection's item template,
+   * to ensure that the item template is always up to date.
+   * Check when a NavigationEnd event (URL change) or a Scroll event followed by a NavigationEnd event (refresh event), occurs
+   */
   ngOnInit(): void {
-    super.ngOnInit();
-    this.initTemplateItem();
+    this.router.events.subscribe((event) => {
+      if (
+        event instanceof NavigationEnd ||
+        (event instanceof Scroll && event.routerEvent instanceof NavigationEnd)
+      ) {
+        super.ngOnInit();
+        this.initTemplateItem();
+        this.chd.detectChanges();
+      }
+    });
   }
 
   /**
@@ -65,7 +81,7 @@ export class CollectionMetadataComponent extends ComcolMetadataComponent<Collect
       getFirstSucceededRemoteDataPayload(),
     );
     const template$ = collection$.pipe(
-      switchMap((collection: Collection) => this.itemTemplateService.create(new Item(), collection.uuid).pipe(
+      switchMap((collection: Collection) => this.itemTemplateService.createByCollectionID(new Item(), collection.uuid).pipe(
         getFirstSucceededRemoteDataPayload(),
       )),
     );
@@ -83,18 +99,15 @@ export class CollectionMetadataComponent extends ComcolMetadataComponent<Collect
    * Delete the item template from the collection
    */
   deleteItemTemplate() {
-    const collection$ = this.dsoRD$.pipe(
+    this.dsoRD$.pipe(
       getFirstSucceededRemoteDataPayload(),
-    );
-    const template$ = collection$.pipe(
-      switchMap((collection: Collection) => this.itemTemplateService.findByCollectionID(collection.uuid).pipe(
-        getFirstSucceededRemoteDataPayload(),
-      )),
-    );
-    combineLatestObservable(collection$, template$).pipe(
-      switchMap(([collection, template]) => {
-        return this.itemTemplateService.deleteByCollectionID(template, collection.uuid);
-      })
+      switchMap((collection: Collection) => this.itemTemplateService.findByCollectionID(collection.uuid)),
+      getFirstSucceededRemoteDataPayload(),
+      switchMap((template) => {
+        return this.itemTemplateService.delete(template.uuid);
+      }),
+      getFirstCompletedRemoteData(),
+      map((response: RemoteData<NoContent>) => hasValue(response) && response.hasSucceeded),
     ).subscribe((success: boolean) => {
       if (success) {
         this.notificationsService.success(null, this.translate.get('collection.edit.template.notifications.delete.success'));

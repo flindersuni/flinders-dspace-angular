@@ -17,6 +17,11 @@ import { BrowseByConfig } from './browse-by-config.interface';
 import { BundleConfig } from './bundle-config.interface';
 import { ActuatorsConfig } from './actuators.config';
 import { InfoConfig } from './info-config.interface';
+import { CommunityListConfig } from './community-list-config.interface';
+import { HomeConfig } from './homepage-config.interface';
+import { MarkdownConfig } from './markdown-config.interface';
+import { FilterVocabularyConfig } from './filter-vocabulary-config';
+import { DiscoverySortConfig } from './discovery-sort.config';
 
 interface AppConfig extends Config {
   ui: UIServerConfig;
@@ -31,6 +36,8 @@ interface AppConfig extends Config {
   defaultLanguage: string;
   languages: LangConfig[];
   browseBy: BrowseByConfig;
+  communityList: CommunityListConfig;
+  homePage: HomeConfig;
   item: ItemConfig;
   collection: CollectionPageConfig;
   themes: ThemeConfig[];
@@ -38,11 +45,18 @@ interface AppConfig extends Config {
   bundle: BundleConfig;
   actuators: ActuatorsConfig
   info: InfoConfig;
+  markdown: MarkdownConfig;
+  vocabularies: FilterVocabularyConfig[];
+  comcolSelectionSort: DiscoverySortConfig;
 }
 
+/**
+ * Injection token for the app configuration.
+ * Provided in {@link InitService.providers}.
+ */
 const APP_CONFIG = new InjectionToken<AppConfig>('APP_CONFIG');
 
-const APP_CONFIG_STATE = makeStateKey('APP_CONFIG_STATE');
+const APP_CONFIG_STATE = makeStateKey<AppConfig>('APP_CONFIG_STATE');
 
 export {
   AppConfig,
