@@ -5,7 +5,7 @@ import { RootComponent as BaseComponent } from '../../../../app/root/root.compon
 @Component({
   selector: 'ds-root-flinders',
   styleUrls: ['../../../../app/root/root.component.scss'],
-  templateUrl: '../../../../app/root/root.component.html',
+  templateUrl: './root.component.html',
   animations: [slideSidebarPadding],
 })
 export class FlindersRootComponent extends BaseComponent {

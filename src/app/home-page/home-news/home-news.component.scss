@@ -7,9 +7,11 @@
 .display-3 {
     word-break: break-word;
 }
-
+//FAFFFERY DUE TO THEME FAILURE TO LOAD CORRECTLY WITH EAGER/LAZY EVAL
 .jumbotron {
   background-color: var(--ds-home-news-background-color);
+  background-image: url('/assets/flinders/images/flinders-academic-commons-banner.jpg');
+  background-size: cover;
 }
 
 a {
@@ -18,4 +20,8 @@ a {
   @include hover {
     color: var(--ds-home-news-link-hover-color);
   }
+}
+//FAFFFERY DUE TO THEME FAILURE TO LOAD CORRECTLY WITH EAGER/LAZY EVAL
+.flinders-fac-message {
+  margin-bottom: 48px;
 }

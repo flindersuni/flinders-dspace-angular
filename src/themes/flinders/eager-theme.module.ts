@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SharedModule } from '../../app/shared/shared.module';
-import {FlindersNavbarComponent} from './app/navbar/navbar.component';
 import { RootModule } from '../../app/root.module';
-import { NavbarModule } from '../../app/navbar/navbar.module';
 import { SharedBrowseByModule } from '../../app/shared/browse-by/shared-browse-by.module';
-import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module';
-import {FlindersHeaderNavbarWrapperComponent} from "./app/header-nav-wrapper/header-navbar-wrapper.component";
+import { ResultsBackButtonModule } from '../../app/shared/results-back-button/results-back-button.module'
 import {FlindersHeaderComponent} from "./app/header/header.component";
 import {FlindersHomeNewsComponent} from "./app/home-page/home-news/home-news.component";
-import {FlindersRegisterEmailFormComponent} from "./app/register-email-form/register-email-form.component";
-import {FlindersRegisterEmailComponent} from "./app/register-page/register-email/register-email.component";
+import {FlindersHomePageComponent} from "./app/home-page/home-page.component";
+import {FlindersHeaderNavbarWrapperComponent} from "./app/header-nav-wrapper/header-navbar-wrapper.component";
+import {FlindersNavbarComponent} from "./app/navbar/navbar.component";
+import {NavbarModule} from "../../app/navbar/navbar.module";
 
 /**
  * Add components that use a custom decorator to ENTRY_COMPONENTS as well as DECLARATIONS.
@@ -20,10 +19,9 @@ const ENTRY_COMPONENTS = [];
 
 const DECLARATIONS = [
   ...ENTRY_COMPONENTS,
-  FlindersHomeNewsComponent,
   FlindersHeaderComponent,
   FlindersHeaderNavbarWrapperComponent,
-  FlindersNavbarComponent
+  FlindersNavbarComponent,
 ];
 
 @NgModule({
@@ -33,7 +31,7 @@ const DECLARATIONS = [
     SharedBrowseByModule,
     ResultsBackButtonModule,
     RootModule,
-    NavbarModule,
+    NavbarModule
   ],
   declarations: DECLARATIONS,
   providers: [

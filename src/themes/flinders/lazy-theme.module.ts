@@ -124,6 +124,8 @@ import {FlindersEndUserAgreementComponent} from "./app/info/end-user-agreement/e
 import {
   FlindersEndUserAgreementContentComponent
 } from "./app/info/end-user-agreement/end-user-agreement-content/end-user-agreement-content.component";
+import {FlindersHomeNewsComponent} from "./app/home-page/home-news/home-news.component";
+import {FlindersLogInComponent} from "./app/shared/log-in/log-in.component";
 
 const DECLARATIONS = [
   FlindersBrowseBySwitcherComponent,
@@ -136,7 +138,6 @@ const DECLARATIONS = [
   FlindersForbiddenComponent,
   FlindersForgotEmailComponent,
   FlindersForgotPasswordFormComponent,
-  FlindersHomePageComponent,
   FlindersTopLevelCommunityListComponent,
   FlindersFeedbackComponent,
   FlindersPrivacyComponent,
@@ -168,7 +169,10 @@ const DECLARATIONS = [
   FlindersRegisterEmailComponent,
   FlindersCommunityStatisticsPageComponent,
   FlindersEndUserAgreementComponent,
-  FlindersEndUserAgreementContentComponent
+  FlindersEndUserAgreementContentComponent,
+  FlindersHomeNewsComponent,
+  FlindersHomePageComponent,
+  FlindersLogInComponent
 ];
 
 @NgModule({

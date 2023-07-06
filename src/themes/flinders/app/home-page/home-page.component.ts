@@ -3,8 +3,8 @@ import { HomePageComponent as BaseComponent } from '../../../../app/home-page/ho
 
 @Component({
   selector: 'ds-home-page-flinders',
-  styleUrls: ['../../../../app/home-page/home-page.component.scss'],
-  templateUrl: '../../../../app/home-page/home-page.component.html'
+  styleUrls: ['./home-page.component.scss'],
+  templateUrl: './home-page.component.html'
 })
 export class FlindersHomePageComponent extends BaseComponent {
 

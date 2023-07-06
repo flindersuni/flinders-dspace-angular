@@ -4727,7 +4727,7 @@
 
   "thumbnail.person.placeholder": "No Profile Picture Available",
 
-  "title": "Flinders Academic Commons",
+  "title": "Flinders Academic Commons : ",
 
   "vocabulary-treeview.header": "Hierarchical tree view",
 
@@ -5217,4 +5217,7 @@
 
   "access-control-option-end-date-note": "Select the date until which the related access condition is applied",
 
+  "item.page.rights": "Rights",
+
+  "item.page.rights.holder": "Rights Holder"
 }
