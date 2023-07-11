@@ -10,5 +10,5 @@ import { WorkflowItemSendBackComponent as BaseComponent } from '../../../../../a
 /**
  * Component representing a page to send back a workflow item to the submitter
  */
-export class WorkflowItemSendBackComponent extends BaseComponent {
+export class FlindersWorkflowItemSendBackComponent extends BaseComponent {
 }

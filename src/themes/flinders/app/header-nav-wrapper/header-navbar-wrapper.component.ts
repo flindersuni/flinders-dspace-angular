@@ -9,5 +9,5 @@ import { HeaderNavbarWrapperComponent as BaseComponent } from '../../../../app/h
   styleUrls: ['../../../../app/header-nav-wrapper/header-navbar-wrapper.component.scss'],
   templateUrl: '../../../../app/header-nav-wrapper/header-navbar-wrapper.component.html',
 })
-export class HeaderNavbarWrapperComponent extends BaseComponent {
+export class FlindersHeaderNavbarWrapperComponent extends BaseComponent {
 }

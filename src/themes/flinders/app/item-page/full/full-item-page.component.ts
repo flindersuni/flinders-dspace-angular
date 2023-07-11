@@ -14,5 +14,5 @@ import { FullItemPageComponent as BaseComponent } from '../../../../../app/item-
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [fadeInOut]
 })
-export class FullItemPageComponent extends BaseComponent {
+export class FlindersFullItemPageComponent extends BaseComponent {
 }

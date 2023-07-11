@@ -3,14 +3,12 @@ import { ItemStatisticsPageComponent as BaseComponent } from '../../../../../app
 
 @Component({
   selector: 'ds-item-statistics-page-flinders',
-  // styleUrls: ['./item-statistics-page.component.scss'],
   styleUrls: ['../../../../../app/statistics-page/item-statistics-page/item-statistics-page.component.scss'],
-  // templateUrl: './item-statistics-page.component.html',
   templateUrl: '../../../../../app/statistics-page/statistics-page/statistics-page.component.html'
 })
 
 /**
  * Component representing the statistics page for an item.
  */
-export class ItemStatisticsPageComponent extends BaseComponent {}
+export class FlindersItemStatisticsPageComponent extends BaseComponent {}
 

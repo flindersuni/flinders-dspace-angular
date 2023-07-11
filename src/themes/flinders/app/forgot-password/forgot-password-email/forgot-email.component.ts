@@ -9,5 +9,5 @@ import { ForgotEmailComponent as BaseComponent } from '../../../../../app/forgot
 /**
  * Component responsible the forgot password email step
  */
-export class ForgotEmailComponent extends BaseComponent {
+export class FlindersForgotEmailComponent extends BaseComponent {
 }

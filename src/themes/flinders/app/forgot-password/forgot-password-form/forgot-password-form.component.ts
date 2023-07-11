@@ -9,5 +9,5 @@ import { ForgotPasswordFormComponent as BaseComponent } from '../../../../../app
 /**
  * Component for a user to enter a new password for a forgot token.
  */
-export class ForgotPasswordFormComponent extends BaseComponent {
+export class FlindersForgotPasswordFormComponent extends BaseComponent {
 }

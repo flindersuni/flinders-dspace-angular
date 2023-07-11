@@ -10,4 +10,4 @@ import { FeedbackComponent as BaseComponent } from '../../../../../app/info/feed
 /**
  * Component displaying the feedback Statement
  */
-export class FeedbackComponent extends BaseComponent { }
+export class FlindersFeedbackComponent extends BaseComponent { }

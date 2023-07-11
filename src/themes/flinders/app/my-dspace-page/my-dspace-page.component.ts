@@ -19,5 +19,5 @@ import { MyDSpaceConfigurationService } from '../../../../app/my-dspace-page/my-
     }
   ]
 })
-export class MyDSpacePageComponent extends BaseComponent {
+export class FlindersMyDSpacePageComponent extends BaseComponent {
 }
