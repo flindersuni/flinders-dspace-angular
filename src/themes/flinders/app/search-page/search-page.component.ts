@@ -5,8 +5,6 @@ import { SearchConfigurationService } from '../../../../app/core/shared/search/s
 
 @Component({
   selector: 'ds-search-page-flinders',
-  // styleUrls: ['./search-page.component.scss'],
-  // templateUrl: './search-page.component.html'
   templateUrl: '../../../../app/search-page/search-page.component.html',
   providers: [
     {
@@ -20,5 +18,5 @@ import { SearchConfigurationService } from '../../../../app/core/shared/search/s
  * This component represents the whole search page
  * It renders search results depending on the current search options
  */
-export class SearchPageComponent extends BaseComponent {}
+export class FlindersSearchPageComponent extends BaseComponent {}
 

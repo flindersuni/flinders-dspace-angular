@@ -23,7 +23,7 @@ import {hasValue} from '../../../../../app/shared/empty.util';
   animations: [fadeInOut]
 })
 
-export class TopLevelCommunityListComponent implements OnInit, OnDestroy {
+export class FlindersTopLevelCommunityListComponent implements OnInit, OnDestroy {
   /**
    * A list of remote data objects of all top communities
    */

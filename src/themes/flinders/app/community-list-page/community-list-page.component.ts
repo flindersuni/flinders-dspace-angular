@@ -10,5 +10,5 @@ import { CommunityListPageComponent as BaseComponent } from '../../../../app/com
  * Page with title and the community list tree, as described in community-list.component;
  * navigated to with community-list.page.routing.module
  */
-export class CommunityListPageComponent extends BaseComponent {}
+export class FlindersCommunityListPageComponent extends BaseComponent {}
 

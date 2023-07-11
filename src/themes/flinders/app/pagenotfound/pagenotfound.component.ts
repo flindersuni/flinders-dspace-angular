@@ -11,5 +11,5 @@ import { PageNotFoundComponent as BaseComponent } from '../../../../app/pagenotf
 /**
  * This component representing the `PageNotFound` DSpace page.
  */
-export class PageNotFoundComponent extends BaseComponent {}
+export class FlindersPageNotFoundComponent extends BaseComponent {}
 

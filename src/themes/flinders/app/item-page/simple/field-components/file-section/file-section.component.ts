@@ -7,6 +7,6 @@ import { FileSectionComponent as BaseComponent } from '../../../../../../../app/
     templateUrl: '../../../../../../../app/item-page/simple/field-components/file-section/file-section.component.html',
     animations: [slideSidebarPadding],
 })
-export class FileSectionComponent extends BaseComponent {
+export class FlindersFileSectionComponent extends BaseComponent {
 
 }

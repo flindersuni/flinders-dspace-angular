@@ -11,5 +11,5 @@ import { BrowseBySwitcherComponent as BaseComponent } from '../../../../../app/b
 /**
  * Component for determining what Browse-By component to use depending on the metadata (browse ID) provided
  */
-export class BrowseBySwitcherComponent extends BaseComponent {}
+export class FlindersBrowseBySwitcherComponent extends BaseComponent {}
 

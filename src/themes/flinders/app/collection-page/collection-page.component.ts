@@ -16,4 +16,4 @@ import { fadeIn, fadeInOut } from '../../../../app/shared/animations/fade';
 /**
  * This component represents a detail page for a single collection
  */
-export class CollectionPageComponent extends BaseComponent {}
+export class FlindersCollectionPageComponent extends BaseComponent {}

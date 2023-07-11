@@ -15,6 +15,6 @@ import { PublicationComponent as BaseComponent } from '../../../../../../../app/
   templateUrl: '../../../../../../../app/item-page/simple/item-types/publication/publication.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PublicationComponent extends BaseComponent {
+export class FlindersPublicationComponent extends BaseComponent {
 
 }

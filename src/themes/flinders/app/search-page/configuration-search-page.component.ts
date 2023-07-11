@@ -6,9 +6,7 @@ import { ConfigurationSearchPageComponent as BaseComponent } from '../../../../a
 
 @Component({
   selector: 'ds-configuration-search-page-flinders',
-  // styleUrls: ['./configuration-search-page.component.scss'],
   styleUrls: ['../../../../app/shared/search/search.component.scss'],
-  // templateUrl: './configuration-search-page.component.html'
   templateUrl: '../../../../app/shared/search/search.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   animations: [pushInOut],
@@ -23,5 +21,5 @@ import { ConfigurationSearchPageComponent as BaseComponent } from '../../../../a
 /**
  * This component renders a search page using a configuration as input.
  */
-export class ConfigurationSearchPageComponent extends BaseComponent {}
+export class FlindersConfigurationSearchPageComponent extends BaseComponent {}
 

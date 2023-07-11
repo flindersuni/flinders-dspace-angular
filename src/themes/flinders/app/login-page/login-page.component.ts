@@ -9,5 +9,5 @@ import { LoginPageComponent as BaseComponent } from '../../../../app/login-page/
   styleUrls: ['../../../../app/login-page/login-page.component.scss'],
   templateUrl: '../../../../app/login-page/login-page.component.html'
 })
-export class LoginPageComponent extends BaseComponent {
+export class FlindersLoginPageComponent extends BaseComponent {
 }

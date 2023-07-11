@@ -19,7 +19,7 @@ import { of as observableOf } from 'rxjs';
 /**
  * Component displaying the End User Agreement and an option to accept it
  */
-export class EndUserAgreementComponent implements OnInit {
+export class FlindersEndUserAgreementComponent implements OnInit {
 
   /**
    * Whether or not the user agreement has been accepted
