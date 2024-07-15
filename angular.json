@@ -46,14 +46,9 @@
             "styles": [
               "src/styles/startup.scss",
               {
-                "input": "src/styles/base-theme.scss",
+                "input": "src/themes/flindersv2/styles/theme.scss",
                 "inject": false,
-                "bundleName": "base-theme"
-              },
-              {
-                "input": "src/themes/dspace/styles/theme.scss",
-                "inject": false,
-                "bundleName": "dspace-theme"
+                "bundleName": "flindersv2-theme"
               }
             ],
             "scripts": [],

@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>{{ 'info.end-user-agreement.head' | translate }}</h1>
+
+  Flinders Academic Commons (FAC) Terms of Use
+
+  Users of the FAC platform may view and download and/or print a copy of the research publications contained within FAC for their own personal research or study purposes only.
+
+  No further copying, distribution, or adaptation is permitted without permission from the copyright owner of the publication (specified in the “Rights Holder” section of each publication item).
+
+  If the item carries a Creative Commons licence, you can only reuse the publication in compliance with the terms of that licence and you are not allowed to reuse the publication for commercial purposes unless permitted to do so under the terms of that licence.
+
+  For queries regarding copyright, contact copyright&#64;flinders.edu.au.
+
+
+  <form class="form-user-agreement-accept mt-4" (ngSubmit)="submit()" novalidate>
+    <input class="ml-1 mr-2" type="checkbox" id="user-agreement-accept" [(ngModel)]="accepted" [ngModelOptions]="{standalone: true}">
+    <label class="col-form-label-lg" for="user-agreement-accept">{{ 'info.end-user-agreement.accept' | translate }}</label>
+
+    <div class="d-flex mt-4">
+      <button id="button-cancel" type="button" (click)="cancel()" class="btn btn-outline-secondary mr-auto">{{ 'info.end-user-agreement.buttons.cancel' | translate }}</button>
+      <button id="button-save" type="submit" class="btn btn-primary" [disabled]="!accepted">{{ 'info.end-user-agreement.buttons.save' | translate }}</button>
+    </div>
+  </form>
+</div>
+
+
+
