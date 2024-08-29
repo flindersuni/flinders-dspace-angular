@@ -3184,7 +3184,7 @@
 
   "login.form.password": "Password",
 
-  "login.form.shibboleth": "Log in with Shibboleth",
+  "login.form.shibboleth": "Log in with OKTA",
 
   "login.form.submit": "Log in",
 
@@ -4176,9 +4176,9 @@
 
   "repository.image.logo": "Repository logo",
 
-  "repository.title": "DSpace Repository",
+  "repository.title": "Flinders Academic Commons",
 
-  "repository.title.prefix": "DSpace Repository :: ",
+  "repository.title.prefix": "Flinders Academic Commons :: ",
 
   "resource-policies.add.button": "Add",
 

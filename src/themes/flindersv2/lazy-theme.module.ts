@@ -13,6 +13,8 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { RootModule } from '../../app/root.module';
 import {EndUserAgreementComponent} from "./app/info/end-user-agreement/end-user-agreement.component";
 import {PrivacyComponent} from "./app/info/privacy/privacy.component";
+import {HeaderComponent} from "./app/header/header.component";
+import {FooterComponent} from "./app/footer/footer.component";
 
 const DECLARATIONS = [ ];
 
@@ -30,7 +32,9 @@ const DECLARATIONS = [ ];
     StoreRouterConnectingModule,
     TranslateModule,
     EndUserAgreementComponent,
-    PrivacyComponent
+    PrivacyComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   declarations: DECLARATIONS,
 })
