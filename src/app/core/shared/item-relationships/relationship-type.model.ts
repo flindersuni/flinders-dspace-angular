@@ -1,6 +1,15 @@
-import { autoserialize, deserialize, deserializeAs } from 'cerialize';
+import {
+  autoserialize,
+  deserialize,
+  deserializeAs,
+} from 'cerialize';
 import { Observable } from 'rxjs';
-import { link, typedObject } from '../../cache/builders/build-decorators';
+
+import {
+  link,
+  typedObject,
+} from '../../cache/builders/build-decorators';
+import { CacheableObject } from '../../cache/cacheable-object.model';
 import { IDToUUIDSerializer } from '../../cache/id-to-uuid-serializer';
 import { RemoteData } from '../../data/remote-data';
 import { excludeFromEquals } from '../../utilities/equals.decorators';
@@ -43,7 +52,7 @@ export class RelationshipType implements CacheableObject {
    * It is based on the ID, so it will be the same for each refresh.
    */
   @deserializeAs(new IDToUUIDSerializer(RelationshipType.type.value), 'id')
-  uuid: string;
+    uuid: string;
 
   /**
    * The label that describes the Relation to the left of this RelationshipType

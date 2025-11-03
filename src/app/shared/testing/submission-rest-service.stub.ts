@@ -1,6 +1,7 @@
-import { of as observableOf } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { of } from 'rxjs';
 
+import { CoreState } from '../../core/core-state.model';
 import { RequestService } from '../../core/data/request.service';
 import { HALEndpointService } from '../../core/shared/hal-endpoint.service';
 import { CoreState } from '../../core/core-state.model';
@@ -17,6 +18,6 @@ export class SubmissionRestServiceStub {
   getDataByHref = jasmine.createSpy('getDataByHref');
   getEndpointByIDHref = jasmine.createSpy('getEndpointByIDHref');
   patchToEndpoint = jasmine.createSpy('patchToEndpoint');
-  postToEndpoint = jasmine.createSpy('postToEndpoint').and.returnValue(observableOf({}));
+  postToEndpoint = jasmine.createSpy('postToEndpoint').and.returnValue(of({}));
   submitData = jasmine.createSpy('submitData');
 }

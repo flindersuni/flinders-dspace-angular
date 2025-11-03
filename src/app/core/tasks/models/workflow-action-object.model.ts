@@ -1,6 +1,11 @@
-import { inheritSerialization, autoserialize } from 'cerialize';
+import {
+  autoserialize,
+  inheritSerialization,
+} from 'cerialize';
+
 import { typedObject } from '../../cache/builders/build-decorators';
 import { DSpaceObject } from '../../shared/dspace-object.model';
+import { AdvancedWorkflowInfo } from './advanced-workflow-info.model';
 import { WORKFLOW_ACTION } from './workflow-action-object.resource-type';
 import { AdvancedWorkflowInfo } from './advanced-workflow-info.model';
 

@@ -1,27 +1,19 @@
 :host {
     display: block;
-    margin-top: calc(-1 * var(--ds-content-spacing));
-    margin-bottom: calc(-1 * var(--ds-content-spacing));
 }
 
 .display-3 {
     word-break: break-word;
 }
-//FAFFFERY DUE TO THEME FAILURE TO LOAD CORRECTLY WITH EAGER/LAZY EVAL
-.jumbotron {
+
+.home-news-content {
   background-color: var(--ds-home-news-background-color);
-  background-image: url('/assets/flinders/images/flinders-academic-commons-banner.jpg');
-  background-size: cover;
 }
 
 a {
   color: var(--ds-home-news-link-color);
 
-  @include hover {
+  &:hover {
     color: var(--ds-home-news-link-hover-color);
   }
-}
-//FAFFFERY DUE TO THEME FAILURE TO LOAD CORRECTLY WITH EAGER/LAZY EVAL
-.flinders-fac-message {
-  margin-bottom: 48px;
 }
